@@ -11,11 +11,11 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    @yield('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
-    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+    @yield('js')
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
